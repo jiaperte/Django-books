@@ -1,4 +1,4 @@
-"""bookstore_project URL Configuration
+"""epam_test URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -14,16 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 
 urlpatterns = [
     # Django admin
     path('admin/', admin.site.urls),
-
-    # User management
-    path('accounts/', include('django.contrib.auth.urls')),
-
-    # Local apps
-    path('accounts/', include('users.urls')),
-    path('', include('pages.urls'))
 ]
